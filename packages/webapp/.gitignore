@@ -5,6 +5,7 @@ node_modules
 .wrangler
 .vercel
 /.svelte-kit
+/.wrangler
 /build
 /dist
 
