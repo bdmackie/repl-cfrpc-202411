@@ -2,9 +2,11 @@ node_modules
 
 # Output
 .output
+.wrangler
 .vercel
 /.svelte-kit
 /build
+/dist
 
 # OS
 .DS_Store
@@ -15,6 +17,7 @@ Thumbs.db
 .env.*
 !.env.example
 !.env.test
+.dev.vars
 
 # Vite
 vite.config.js.timestamp-*

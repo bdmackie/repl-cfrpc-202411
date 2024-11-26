@@ -5,7 +5,7 @@
   "scripts": {
     "deploy": "wrangler deploy",
     "dev": "wrangler dev",
-    "start": "npx wrangler dev",
+    "start": "npx wrangler dev --x-registry=false",
     "test": "vitest",
     "cf-typegen": "wrangler types"
   },
