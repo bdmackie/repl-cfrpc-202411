@@ -1,11 +1,11 @@
 {
-  "name": "sumworker",
+  "name": "notifyworker",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "deploy": "wrangler deploy",
     "dev": "wrangler dev",
-    "start": "wrangler dev --x-registry=false",
+    "start": "npx wrangler dev --x-registry=false",
     "test": "vitest",
     "cf-typegen": "wrangler types"
   },

@@ -1,9 +1,13 @@
+
 type SumService = {
-	add(a: number, b: number): Promise<number>;
+	add(a: number, b:number): Promise<number>;
 };
 
-type SumWorker = Service<SumService>;
+export type CloudflareWorkerEntrypoint<T> = {
+	[Rpc.__WORKER_ENTRYPOINT_BRAND]: never; // To satisfy the Cloudflare type system.
+} & T;
 
+type SumWorker = Service<CloudflareWorkerEntrypoint<SumService>>;
 
 // See https://svelte.dev/docs/kit/types#app.d.ts
 // for information about these interfaces

@@ -12,12 +12,10 @@
  */
 
 import { WorkerEntrypoint } from 'cloudflare:workers';
-import { Env } from '../worker-configuration';
 
-export default class extends WorkerEntrypoint<Env> {
-	async add(a: number, b: number): Promise<number> {
-		await this.env.NOTIFY_WORKER.notify('Adding ' + a + ' and ' + b);
-		return a + b;
+export default class extends WorkerEntrypoint {
+	async notify(msg: string): Promise<void> {
+		console.log('NOTIFY: ' + msg);
 	}
 
 	override async fetch(request: Request): Promise<Response> {
